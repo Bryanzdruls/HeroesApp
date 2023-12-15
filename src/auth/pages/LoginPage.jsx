@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import { useNavigate } from "react-router-dom"
 import { AuthContext } from "../context/AuthContext"
+import BrianRepo from "./BrianRepo";
 
 export const LoginPage = () => {
   const {login} = useContext( AuthContext );
@@ -16,14 +17,17 @@ export const LoginPage = () => {
   }
 
   return (
-    <div className="container mt-5">
-      <h1>LoginPage</h1>
+    <div className="container mt-5 text-center">
+      <h1>Simulation of a Login Page</h1>
       <hr />
+      <div>
+        <p>Notese que la ruta de esta aplicacion en el url es "login", presione ingresar para desplazarse a la ruta "marvel".</p>
+      </div>
       <button 
         className="btn btn-primary"
         onClick={onLogin}
       >
-        Login
+        Ingresar
       </button>
     </div>
   )
